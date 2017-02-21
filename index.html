@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MARQUEE3000</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <main>
+      <div class="marquee3k">MARQUEE3000</div>
+      <div class="marquee3k">Internet marquees for the new millenium</div>
+      <div class="marquee3k">Smooth as Butter, Light as Silk™</div>
+      <div class="marquee3k brand" data-delay="5">MARQUEE3000</div>
+      <div class="marquee3k link link--git" data-delay="5">
+        <a href="https://github.com/ezekielaquino/Marquee3000">View and download the plugin on GitHub</a>
+      </div>
+      <div class="marquee3k">No dependencies at 2kb</div>
+      <div class="marquee3k">Horizontal Vertical Delay Reverse Speed RandomSpeed</div>
+      <div class="marquee3k">
+        Images or HTML is fine
+        <img src="http://www.trumpethub.com/wp-content/uploads/2014/09/Yamaha-YTR-2335.jpg" />
+      </div>
+      <div class="marquee3k">새로운 밀레니엄에 대한 internet marquees</div>
+      <div class="marquee3k">Ang marquee para sa bagong milenyo</div>
+      <div class="marquee3k">Marquees voor het nieuwe millennium</div>
+      <div class="marquee3k brand--3k" data-reverse="true">NOW IN 3K</div>
+      <div class="marquee3k news" data-speed="100">Live from Bloomberg via NewsAPI</div>
+      <div class="marquee3k" id="news" data-speed="100"></div>
+      <div class="marquee3k tweet" data-reverse="true">
+        <a href="https://twitter.com/home?status=Internet%20Marquees%20in%20HD!%20Marquee3000%20https%3A//ezekielaquino.github.io/Marquee3000/%20%40the_ezekiel" target="_blank">Share on Twitter</a>
+      </div>
+      <div class="marquee3k">So Internet</div>
+      <div class="marquee3k">MARQUEE3000</div>
+      <div class="marquee3k hover">HOVER to view a Massive Marquee™</div>
+      <div class="marquee3k small">Ezekiel Aquino 2017</div>
+
+
+
+      <div class="marquee3k">MARQUEE3000</div>
+      <div class="marquee3k">Internet marquees for the new millenium</div>
+      <div class="marquee3k">Smooth as Butter, Light as Silk™</div>
+      <div class="marquee3k brand" data-delay="5">MARQUEE3000</div>
+      <div class="marquee3k link link--git" data-delay="5">
+        <a href="https://github.com/ezekielaquino/Marquee3000">View and download the plugin on GitHub</a>
+      </div>
+      <div class="marquee3k">No dependencies at 2kb</div>
+      <div class="marquee3k">Horizontal Vertical Delay Reverse Speed RandomSpeed</div>
+      <div class="marquee3k">
+        Images or HTML is fine
+        <img src="http://www.trumpethub.com/wp-content/uploads/2014/09/Yamaha-YTR-2335.jpg" />
+      </div>
+      <div class="marquee3k">새로운 밀레니엄에 대한 internet marquees</div>
+      <div class="marquee3k">Ang marquee para sa bagong milenyo</div>
+      <div class="marquee3k">Marquees voor het nieuwe millennium</div>
+      <div class="marquee3k brand--3k" data-reverse="true">NOW IN 3K</div>
+      <div class="marquee3k tweet" data-reverse="true">
+        <a href="https://twitter.com/home?status=Internet%20Marquees%20in%20HD!%20Marquee3000%20https%3A//ezekielaquino.github.io/Marquee3000/%20%40the_ezekiel" target="_blank">Share on Twitter</a>
+      </div>
+      <div class="marquee3k">So Internet</div>
+      <div class="marquee3k">MARQUEE3000</div>
+      <div class="marquee3k hover">HOVER to view a Massive Marquee™</div>
+      <div class="marquee3k small">Ezekiel Aquino 2017</div>
+
+
+
+      <div class="marquee3k vert vert--new" data-vertical="true">New Global Exclusive</div>
+      <div class="marquee3k vert vert--back" data-vertical="true" data-reverse="true">Marquees are back</div>
+      <div class="marquee3k diagonal">Get creative</div>
+
+      <div class="marquee3k massive">MARQUEE3000</div>
+    </main>
+  </body>
+
+  <script src="marquee3k.js"></script>
+  <script>
+    var news = document.getElementById('news');
+    var massive = document.querySelector('.massive');
+    var massiveToggle = document.querySelector('.hover');
+
+    fetch('https://newsapi.org/v1/articles?source=bloomberg&apiKey=3e861bf4fcbf4f458dbc4b64310a9fa6', {
+      method: 'GET'
+    }).then(function(response) {
+      response.json().then(function(data){
+        for (var i = 0; i < data.articles.length; i++) {
+          var article = data.articles[i];
+          var articleElem = document.createElement('span');
+
+          articleElem.innerHTML = article.title;
+          news.appendChild(articleElem);
+        }
+
+        // Init MARQUEE3000
+        Marquee3k({
+          randomSpeed: true,
+          spacing: '0.5rem'
+        });
+      });
+    });
+
+    massiveToggle.addEventListener('mouseenter', function() {
+      massive.classList.add('is-active');
+    });
+
+    massiveToggle.addEventListener('mouseleave', function() {
+      massive.classList.remove('is-active');
+    });
+  </script>
+</html>
