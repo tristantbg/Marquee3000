@@ -79,11 +79,11 @@ a {
 }
 
 .diagonal {
-  width: 110vw;
+  width: 140vw;
   position: fixed !important;
-  left: -30px;
-  top: 100px;
-  transform-origin: 13vw 50%;
+  left: 0;
+  top: 20px;
+  transform-origin: 0% 0%;
   transform: rotate(30deg);
   background: #FFD800;
   z-index: 997;
