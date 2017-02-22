@@ -67,6 +67,7 @@
 
       <div class="marquee3k vert vert--new" data-vertical="true">New Global Exclusive</div>
       <div class="marquee3k vert vert--back" data-vertical="true" data-reverse="true">Marquees are back</div>
+      <div class="marquee3k diag">One smooth marquee, there are currently <span id="len"></span> on this page</div>
       <div class="marquee3k diagonal">Get creative</div>
 
       <div class="marquee3k massive" data-speed="200">MARQUEE3000</div>
@@ -79,6 +80,11 @@
     var news = document.getElementById('news');
     var massive = document.querySelector('.massive');
     var massiveToggle = document.querySelector('.hover');
+    var len = document.getElementById('len');
+    var marqs = document.querySelectorAll('.marquee3k');
+
+    len.innerHTML = marqs.length;
+
 
     fetch('https://newsapi.org/v1/articles?source=bloomberg&apiKey=3e861bf4fcbf4f458dbc4b64310a9fa6', {
       method: 'GET'
