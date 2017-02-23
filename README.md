@@ -6,6 +6,11 @@ Super smooth and versatile javaScript plugin with no dependencies.
 
 👄
 
+Note: Marquees were a bit neglected, no? There are tons,
+but they're slow and you can't really do much with them.
+So much you can do with the inherently strong typographic
+look of em. So this is me trying to update them for 2017.
+
 ## Features
 - ~3kb minified with no dependencies
 - Turn any element into a smooth-as-butter marquee
@@ -23,24 +28,26 @@ Super smooth and versatile javaScript plugin with no dependencies.
 
 ## Usage
 
-1. Include Marquee3000 in your html file.
+1. Include Marquee3000 in your html file. Download zip or install via `npm install marquee3000`
 
-    ``` html
+    ```html
         <script src="marquee3k.min.js"></script>
+     ```
         
 2. Create an element with a `.marquee3k` class. You can pass different options such as speed, orientation and direction (optional). See below for options.
 
-    ``` html
+    ```html
         <div class="marquee3k" 
             data-speed="60" → speed in pixels/sec (default: 50)
             data-reverse="bool" → default: R to L / T to B
-            data-direction="vertical" → horizontal or vertical
+            data-vertical="bool" → [def] horizontal or [true] vertical
             data-delay="2" → Initial pause before animating (in sec)>
             MARQUEE3000
             <!--you can even have inline images,
             or any kind of html -->
             <img src="trumpet.jpg" />
         </div>
+    ```
         
 3. Fill it up with text or images etc. (still finding out what you can do with it)
 
@@ -50,17 +57,46 @@ Super smooth and versatile javaScript plugin with no dependencies.
 
 You can set additional configuration options.
 
-    ``` js
+    ```js
         Marquee3k({
             selector: '.selector-name', // define a custom classname
             randomSpeed: bool // if true, each marquee will be assigned a random speed between 10-50px/sec
         });
+     ```
 
 Marquee also adds a `is-ready` selector. You can use this to add and toggle entrance transitions, for example.
 
 ### To Do
 - Make it play well with type plugins such as lettering.js or some other scripts
 - Some basic implementation of callbacks
+- More play options
+
+### Questions
+
+**Q: But it's slow, I have 150+ of them on the same page**
+
+A: If you've got literally hundreds of them on one page, you've got
+a marquee addiction problem. Contact a internet professional or
+buy me a beer, I think we'd get along quite well.
+
+**Q: Does it work on mobile?**
+
+A: Yes it does and it works quite well! If you're going to be rotating
+things and all that fancy stuff, just make sure to style it with CSS.
+
+**Q: Can i make a marquee that's position fixed?**
+
+A: Absolutely. You just have to wrap the marquee element inside another
+container which gets the `position: fixed`. Namaste.
+
+**Q: Can you make it spin?**
+
+A: Umm, sure. Well you can do anything with it really *Demo coming soon*
+
+**Q: I have more questions, what's your support hotline?**
+
+A: 1-800-MARQUEE or you can just mention me on twitter (@the_ezekiel)
+
 
 ## Say hi!
 The plugin is completely free but I'd love to know if you have used the plugin for something cool! Would love to see what you've made! Drop me a line at ezekielaquino@gmail.com or via @the_ezekiel on Twitter!
