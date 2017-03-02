@@ -67,6 +67,7 @@ a {
   transition: opacity 0.25s;
 }
 
+
 .marquee3k.is-ready:not(.massive) {
   opacity: 1;
 }
@@ -99,6 +100,10 @@ a {
 
 .news {
   color: blue;
+}
+
+.site-link {
+  color: #FF3584;
 }
 
 .tweet {
