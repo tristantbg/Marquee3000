@@ -11,7 +11,7 @@
 
   <body>
     <main>
-      <div class="marquee3k">MARQUEE3000</div>
+      <div class="marquee3k" data-callback="callback">MARQUEE3000</div>
       <div class="marquee3k">Internet marquees for the new millenium</div>
       <div class="marquee3k">Smooth as Butter, Light as Silk™</div>
       <div class="marquee3k brand" data-delay="5">MARQUEE3000</div>
@@ -24,7 +24,7 @@
       <div class="marquee3k">
         Images or HTML is fine
       </div>
-      <div class="marquee3k site-link">
+      <div class="marquee3k site-link" data-hover="true">
         <a href="http://ezekielaquino.com">Visit my website and write on my guestbook. Yes a guest book you heard that right!</a>
       </div>
       <div class="marquee3k">새로운 밀레니엄에 대한 internet marquees</div>
@@ -117,6 +117,10 @@
     massiveToggle.addEventListener('mouseleave', function() {
       massive.classList.remove('is-active');
     });
+
+    function callback() {
+      console.log('Callback sample: Marquee finished, restarting.');
+    }
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
