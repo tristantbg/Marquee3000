@@ -28,7 +28,7 @@ look of em. So this is me trying to update them for 2017.
 
 ## Usage
 
-1. Include Marquee3000 in your html file. Download zip or install via `npm install marquee3000`
+1. Include Marquee3000 in your html file. Download zip or install via `bower install marquee3000` || `npm install marquee3000`
 
     ```html
         <script src="marquee3k.min.js"></script>
@@ -41,7 +41,8 @@ look of em. So this is me trying to update them for 2017.
             data-speed="60" → speed in pixels/sec (default: 50)
             data-reverse="bool" → default: R to L / T to B
             data-vertical="bool" → [def] horizontal or [true] vertical
-            data-delay="2" → Initial pause before animating (in sec)>
+            data-delay="2" → Initial pause before animating (in sec)
+            data-pausable="bool" → Pause marquee on hover> 
             MARQUEE3000
             <!--you can even have inline images,
             or any kind of html -->
@@ -70,6 +71,10 @@ Marquee also adds a `is-ready` selector. You can use this to add and toggle entr
 - Make it play well with type plugins such as lettering.js or some other scripts
 - Some basic implementation of callbacks
 - More play options
+
+### Changes in 0.0.2 (Bear with me with the versioning)
+
+- Marquees now take the width (horizontal) or the height (vertical) of its parent element if it is set. Otherwise, it will just take the width/height of the viewport.
 
 ### Questions
 
