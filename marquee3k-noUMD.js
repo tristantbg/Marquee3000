@@ -67,7 +67,9 @@ class Marquee3k {
   _createClone() {
     const clone = this.content.cloneNode(true);
     clone.style.display = 'inline-block';
-    clone.classList.add(`${this.selector}__copy`);
+    clone.classList.add(`${this.
+                        
+                        or}__copy`);
     this.wrapper.appendChild(clone);
   }
 
@@ -113,7 +115,7 @@ class Marquee3k {
 
   static init(options = { selector: 'marquee3k' }) {
     window.MARQUEES = [];
-    const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
+    const marquees = Array.from(document.querySelectorAll(`${options.selector}`));
     let previousWidth = window.innerWidth;
     let timer;
 
